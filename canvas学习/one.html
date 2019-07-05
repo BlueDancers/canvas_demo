@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas_one</title>
+</head>
+
+<body>
+  <canvas id="my" width="500" height="500"></canvas>
+</body>
+<script>
+  // 增加对canvas的提示
+  /** @type {HTMLCanvasElement} */
+  let canvas = document.getElementById('my')
+  var ctx = canvas.getContext('2d')
+  ctx.fillStyle = "#ff0000" // 设置颜色
+  ctx.fillRect(0, 0, 500, 500) // 设置绘图的坐标
+
+
+  ctx.moveTo(0, 500)
+  ctx.lineTo(500, 0) // 划线结束的坐标
+  ctx.strokeStyle = 'black'
+  ctx.lineWidth = '10'
+  ctx.stroke() // stroke 表示在页面上绘画
+
+  ctx.beginPath() // 开始新的绘画 
+  
+  ctx.moveTo(0, 0) // 划线开始的坐标
+  ctx.lineTo(500, 500) // 划线结束的坐标
+  ctx.strokeStyle = '#fff'
+  ctx.lineWidth = '8'
+  ctx.stroke() // stroke 表示在页面上绘画
+</script>
+
+</html>
